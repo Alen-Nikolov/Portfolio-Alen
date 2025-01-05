@@ -4,6 +4,34 @@
     padding: 25mm 17mm 57mm 17mm;
 }
 
+.pointer {
+    overflow: hidden;
+}
+
 .title {
-    font-size: 24px;
+    font-size: 20px;
+}
+
+.date-certificate {
+    color: #449399;
+}
+
+.description {
+    font-size: 12px;
+
+    a {
+        font-size: 10px;
+    }
+}
+
+.italic {
+    font-style: italic;
+}
+
+.competency-bubble {
+    color: #fff;
+    padding: 1px 10px;
+    margin-right: 5px;
+    background-color: #989da6;
+    border-radius: 5%;
 }

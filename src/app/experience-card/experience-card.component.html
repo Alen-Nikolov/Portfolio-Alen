@@ -1,0 +1,14 @@
+<div class="sub-title font-bold">{{ positionName }}</div>
+<div class="sub-title italic">{{ companyName }}</div>
+<div class="turquoise achievements d-flex justify-content-between">
+    <div>{{ date }}</div>
+    &nbsp;
+    <div>{{ location }}</div>
+</div>
+<div *ngIf="isJob" class="turquoise achievements">Achievements/Tasks</div>
+<div *ngIf="!isJob" class="turquoise achievements">Courses</div>
+<div>
+    <ul class="bullet-points" [class.columns]="!isJob">
+        <li *ngFor="let item of responsibilities">{{ item }}</li>
+    </ul>
+</div>

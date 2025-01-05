@@ -1,9 +1,166 @@
 <div class="container">
     <app-header></app-header>
     <div class="row">
-        <div class="col-6">
-            <div class="title">WORK EXPERIENCE</div>
+        <div class="col-1 align-self-center pointer">
+            <app-section-pointer [isSubSection]="true"></app-section-pointer>
         </div>
-        <div class="col-6"></div>
+        <div class="col-5">
+            <div class="title font-bold mt-2">WORK EXPERIENCE</div>
+            <app-experience-card
+                [companyName]="'Anthill'"
+                [location]="'Sofia, Bulgaria'"
+                [date]="'08/2023 - 02/2025'"
+                [positionName]="'Senior Software Engineer'"
+                [isJob]="true"
+                [responsibilities]="[
+                    'Implementation of Frontend Stories',
+                    'Hotfixing production bugs',
+                    'Preparing release candidates',
+                    'Releasing on production',
+                    'Estimation/Planning/Refinement of Frontend Stories'
+                ]"
+            ></app-experience-card>
+        </div>
+        <div class="col-5 offset-1">
+            <div class="title font-bold mt-2">EDUCATION</div>
+            <app-experience-card
+                [companyName]="
+                    'University of Library studies and Information technology'
+                "
+                [location]="'Sofia, Bulgaria'"
+                [date]="'09/2016 - 06/2019'"
+                [positionName]="'Bachelor of Computer Science'"
+                [isJob]="false"
+                [responsibilities]="[
+                    'Data Structures and Algorithms',
+                    'Advanced Mathematics'
+                ]"
+            ></app-experience-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1 align-self-center pointer">
+            <app-section-pointer [isSubSection]="true"></app-section-pointer>
+        </div>
+        <div class="col-5">
+            <app-experience-card
+                [companyName]="'Tarya Fintech'"
+                [location]="'Sofia, Bulgaria'"
+                [date]="'06/2021 - 06/2023'"
+                [positionName]="'Senior Software Engineer'"
+                [isJob]="true"
+                [responsibilities]="[
+                    'Implementing features and fixing bugs',
+                    'Planning and estimating of features and improvements',
+                    'Training and onboarding of new frontend devs',
+                    'Leading daily meetings',
+                    'Distributing frontend tasks between devs'
+                ]"
+            ></app-experience-card>
+        </div>
+        <div class="col-5 offset-1">
+            <app-experience-card
+                [companyName]="'IT Talents'"
+                [location]="'Sofia, Bulgaria'"
+                [date]="'01/2017 - 06/2017'"
+                [positionName]="'Software Development Camp'"
+                [isJob]="false"
+                [responsibilities]="[
+                    'JavaScript',
+                    'Frontend development',
+                    'Angular',
+                    'Unit Testing'
+                ]"
+            ></app-experience-card>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-1 align-self-center pointer">
+            <app-section-pointer [isSubSection]="true"></app-section-pointer>
+        </div>
+        <div class="col-5">
+            <app-experience-card
+                [companyName]="'ScaleFocus'"
+                [location]="'Sofia, Bulgaria'"
+                [date]="'06/2018 - 02/2022'"
+                [positionName]="'Javascript Developer'"
+                [isJob]="true"
+                [responsibilities]="[
+                    'Implementation of front-end features',
+                    'Bug fixing and analysis',
+                    'Unit and integration testing',
+                    'Responsive design'
+                ]"
+            ></app-experience-card>
+        </div>
+        <div class="col-5 offset-1">
+            <app-experience-card
+                [companyName]="'Software University'"
+                [location]="'Sofia, Bulgaria'"
+                [date]="'06/2016 - 09/2016'"
+                [positionName]="'Frontend Training Camp'"
+                [isJob]="false"
+                [responsibilities]="['JavaScript', 'HTML5 + CSS']"
+            ></app-experience-card>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-1 align-self-center pointer">
+            <app-section-pointer [isSubSection]="true"></app-section-pointer>
+        </div>
+        <div class="col-5">
+            <app-experience-card
+                [companyName]="'Upnetix'"
+                [location]="'Sofia, Bulgaria'"
+                [date]="'06/2017 - 05/2018'"
+                [positionName]="'Frontend Developer'"
+                [isJob]="true"
+                [responsibilities]="[
+                    'Implementation of front-end features',
+                    'Bug fixing and analysis'
+                ]"
+            ></app-experience-card>
+        </div>
+        <div class="col-5 offset-1">
+            <app-experience-card
+                [companyName]="'Abertay University'"
+                [location]="'Dundee, Scotland'"
+                [date]="'09/2014 - 05/2015'"
+                [positionName]="'Computing'"
+                [isJob]="false"
+                [responsibilities]="[
+                    'Java + OOP',
+                    'Statistical analysis',
+                    'Mathematical modelling'
+                ]"
+            ></app-experience-card>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-5 offset-1">
+            <div class="title font-bold">CERTIFICATES</div>
+            <div class="sub-title italic">Google Mobile Web Specialist</div>
+            <div class="date-certificate">01/2020 - 01/2023</div>
+            <div class="description">
+                Basic website layout and styling, Front-end networking,
+                Accessibility, Progressive Web Apps, Performance optimization
+                and caching, Testing and debugging, ES2015 concepts and syntax
+                and Mobile web forms
+            </div>
+        </div>
+
+        <div class="col-5 offset-1">
+            <div class="title font-bold">COMPETENCIES</div>
+            <div class="d-flex flex-wrap">
+                <div
+                    *ngFor="let competency of competencies"
+                    class="competency-bubble my-1"
+                >
+                    {{ competency }}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
